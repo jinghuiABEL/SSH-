@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts  PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd"
+        >
+
+<struts>
+    <constant value="false" name="struts.enable.DynamicMethodInvocation"/>
+    <constant value="false" name="struts.devMode"/>
+    <package name="default" namespace="/" extends="json-default"><!--需要将struts-default改为-->
+        <action name="addInfo"  class="cn.keshe.Action.Useraction"  method="Register">
+           <result>erroo.jsp </result>
+        </action>
+        <action name="LoginInfo"  class="cn.keshe.Action.Useraction"  method="execute">
+            <!--<result name="success">/wangye/index1.jsp </result>-->
+            <result name="success">/wangye/index1.jsp</result>
+        </action>
+        <action name="Leave"  class="cn.keshe.Action.Useraction"  method="leave">
+            <result>index.jsp</result>
+                </action>
+
+        <action name="Update"  class="cn.keshe.Action.Useraction"  method="update">
+            <result ></result>
+        </action>
+
+
+    </package>
+
+</struts>
